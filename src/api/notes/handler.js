@@ -12,7 +12,7 @@ class NotesHandler {
   postNoteHandler(request, h) {
     try {
       const { title = 'untitled', body, tags } = request.payload;
-      const noteId = this._service({ title, body, tags });
+      const noteId = this._service.addNote({ title, body, tags });
 
       const response = h.response({
         status: 'success',

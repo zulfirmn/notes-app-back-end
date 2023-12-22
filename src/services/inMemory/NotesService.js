@@ -1,4 +1,4 @@
-const nanoid = require('nanoid');
+const { nanoid } = require('nanoid');
 
 class NotesService {
   constructor() {
@@ -47,7 +47,7 @@ class NotesService {
 
     const updatedAt = new Date().toISOString();
 
-    this._notes = {
+    this._notes[index] = {
       ...this._notes[index],
       title,
       tags,
